@@ -1,1 +1,1 @@
-# weather-app
+# orck-papar-scissor-AI
