@@ -1,1 +1,1 @@
-# orck-papar-scissor-AI
+# rock-papar-scissor-AI
