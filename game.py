@@ -5,10 +5,10 @@ import random
 import time
 
 #image reading and resizing 
-
-rock_img=cv2.resize(cv2.imread(r"C:\Users\vardh\Desktop\rock_paper_scissor_AI\rock.png"),(324,324))
-paper_img=cv2.resize(cv2.imread(r"C:\Users\vardh\Desktop\rock_paper_scissor_AI/paper.png"),(324,324))
-scissors_img=cv2.resize(cv2.imread(r"C:\Users\vardh\Desktop\rock_paper_scissor_AI/scissors.png"),(324,324))
+#if shows error regarding image not found use abosolute paths
+rock_img=cv2.resize(cv2.imread("rock.png"),(324,324))
+paper_img=cv2.resize(cv2.imread("paper.png"),(324,324))
+scissors_img=cv2.resize(cv2.imread("scissors.png"),(324,324))
 
 #function to convert text based choice to image
 def choice_img(comp_choice):
