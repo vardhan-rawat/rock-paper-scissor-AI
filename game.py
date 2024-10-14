@@ -43,8 +43,8 @@ def rps(choice):
 
 np.set_printoptions(suppress=True)
 
-model = load_model(r"C:\Users\vardh\Desktop\rock_paper_scissor_AI/keras_Model.h5", compile=False)
-class_names = open(r"C:\Users\vardh\Desktop\rock_paper_scissor_AI/labels.txt", "r").readlines()
+model = load_model(r"./keras_model_1.h5", compile=False)
+class_names = open(r"./labels.txt", "r").readlines()
 
 camera = cv2.VideoCapture(0)
 #setting game variables
@@ -78,24 +78,23 @@ while True:
 
     #adjustments to code according to the models prediction accuracy
 
-    if (choice == 'scissors') and (confidence_score_perc>=70):
+    if (choice == 'scissors') and (confidence_score_perc>=99):
         final_choice=choice       
         print(class_name[2:],end=" ")
         print(confidence_score_perc)
 
-    elif (choice == 'rock') and (confidence_score_perc>=95):
+    elif (choice == 'rock') and (confidence_score_perc>=99):
         final_choice=choice
         print(class_name[2:],end=" ")
         print(confidence_score_perc)
 
-    elif (choice == 'paper') and (confidence_score_perc==100):
+    elif (choice == 'paper') and (confidence_score_perc>=99):
         final_choice=choice
         print(class_name[2:],end=" ")
         print(confidence_score_perc)
     
     else:
         final_choice="None"
-
 
     #text to display in window
     text = f'Score:{score}'
